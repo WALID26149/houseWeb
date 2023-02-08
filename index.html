@@ -11,6 +11,8 @@
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
     <!-- javascript link -->
     <script defer src="index.js" charset="utf-8"></script>
+    <!-- Swiper JS -->
+    <script defer src="swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -28,29 +30,31 @@
         </nav>
         <!-- informations section -->
         <div class="info">
-          <h1>Find your perfect Home</h1>
+          <h1 title="hello in your house">Find your perfect Home</h1>
           <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
           <button class="header-btn" type="button" name="button">Get started</button>
         </div>
         <!-- house location -->
-        <div class="house-informations">
-          <!-- location -->
-          <div class="house-location">
-            <h3>Location</h3>
-            <p>Los angeles</p>
-          </div>
-          <hr>
-          <!-- type -->
-          <div class="house-type">
-            <h3>Type</h3>
-            <p>Luxury 3000m</p>
-          </div>
-          <hr>
-          <!-- price -->
-          <div class="house-price">
-            <h3>Price Range</h3>
-            <p>$60,000-$100,000</p>
-            <!-- <button type="button" name="button"><i class="lni lni-search-alt"></i></button> -->
+        <div class="center">
+          <div class="house-informations">
+            <!-- location -->
+            <div class="house-location">
+              <h3>Location</h3>
+              <p>Los angeles</p>
+            </div>
+            <hr>
+            <!-- type -->
+            <div class="house-type">
+              <h3>Type</h3>
+              <p>Luxury 3000m</p>
+            </div>
+            <hr>
+            <!-- price -->
+            <div class="house-price">
+              <h3>Price Range</h3>
+              <p>$100,000</p>
+              <!-- <button type="button" name="button"><i class="lni lni-search-alt"></i></button> -->
+            </div>
           </div>
         </div>
         <div class="contact-model hidden">
@@ -93,39 +97,38 @@
              </div>
           </div>
         </div>
-        <!-- silder section -->
-        <div class="slider">
+
           <div class="slide-heading">
             <h1>Luxury Apartments</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
           </div>
-          <!-- slide icon -->
+
           <div class="icon-slide">
             <i class="slider-btn-left lni lni-chevron-left-circle"></i>
             <i class="slider-btn-right lni lni-chevron-right-circle"></i>
           </div>
-          <!-- slide one -->
+
           <div class="slide-one">
             <img src="https://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2012/6/26/0/CI-Clopay-Doors-canyon-ridge-garage-door_s4x3.jpg.rend.hgtvcom.616.462.suffix/1405427488834.jpeg" alt="">
             <h3>$ 97.026</h3>
             <p>Mancini Homes</p>
             <p>Wuse Zone 5</p>
           </div>
-          <!-- slide tow -->
+
           <div class="slide-tow">
             <img src="https://i.pinimg.com/originals/e8/df/65/e8df650d017bdb8a79f55744ea31a7ad.jpg" alt="">
             <h3>$ 102.255</h3>
             <p>Mancini Homes</p>
             <p>Wuse Zone 5</p>
           </div>
-          <!-- slide three -->
+
           <div class="slide-three">
             <img src="https://i.ytimg.com/vi/0bDKi5HL0HU/maxresdefault.jpg" alt="">
             <h3>$ 200.366</h3>
             <p>Mancini Homes</p>
             <p>Wuse Zone 5</p>
           </div>
-          <!-- slide forth -->
+
           <div class="slide-four">
             <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/03/31010142/Luxury-house-design-Top-10-tips-to-add-luxury-to-your-house-FEATURE-compressed.jpg" alt="">
             <h3>$ 500.322</h3>
@@ -259,7 +262,12 @@
           <button class="scrolle" type="button" name="button"><i class="lni lni-chevron-up"></i></button>
         </div>
         <div class="copy-right">
-          <p>Walid Allan CopyRight © 2022</p>
+          <!-- set dynamic date -->
+          <script type="text/javascript">
+            const getDate = new Date().getFullYear();
+            document.write('Walid Allan CopyRight &copy '+ getDate)
+          </script>
+          <!-- <p>Walid Allan CopyRight © 2022</p> -->
         </div>
        </footer>
     </div>
