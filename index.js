@@ -41,7 +41,7 @@ document.querySelectorAll('.a-link').forEach(function (el) {
 
 // next slide
 const slider = function () {
-  const slides = document.querySelectorAll('.slider');
+  const slides = document.querySelectorAll('.sliders');
   const btnLeft = document.querySelector('.slider-btn-left');
   const btnRight = document.querySelector('.slider-btn-right');
 

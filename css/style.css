@@ -211,7 +211,7 @@ hr{
 }
 /* content section */
 .content{
-  margin: 200px 10%;
+  margin: 200px 10% 30rem;
   transition: transform 1s, opacity 1s;
 }
 .content-img{
@@ -247,7 +247,8 @@ hr{
   background-color: #fff;
   border: 0;
   border-radius: 5px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin: 15px 0;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
@@ -263,7 +264,17 @@ hr{
 /* silder section */
 .slider{
   margin: 150px 0;
+  /* overflow: hidden; */
+}
+.sliders{
   overflow: hidden;
+  /* animation */
+  transition: transform 1s;
+  display: inline-flex;
+  position: absolute;
+}
+.sd{
+  display: inline-flex;
 }
 .slider p {
   text-align: left;
@@ -289,10 +300,7 @@ hr{
   height: 21rem;
   width: 18rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  display: inline-block;
   margin:12px 13px 12px 0;
-  /* animation */
-  transition: transform 1s;
 }
 .slide-one img, .slide-tow img, .slide-three img, .slide-four img{
   height: 200px;
@@ -489,7 +497,9 @@ footer{
 .col p {
   text-align: left;
   color: grey;
-  padding:0  0 10px 100px
+  position: relative;
+  left: 33%;
+  padding:0  50px 0 0;
 }
 .col ul{
   display: inline-block;
@@ -570,11 +580,6 @@ footer{
     padding-right: 60%
   }
 }
-/* @media (min-width:1535px) {
-  .house-informations{
-      top: 50px
-  }
-} */
 @media (max-width:1535px) {
   .subscribe{
     width: 95%;
@@ -583,6 +588,9 @@ footer{
     /* top: 115px; */
     width: 65%
   }
+  /* .two, .three{
+    display: none;
+  } */
 }
 @media (max-width:1200px) {
   .contact-model{
