@@ -667,10 +667,6 @@ footer{
   }
   .slide-one, .slide-tow, .slide-three, .slide-four{
     width: 100%;
-
-  }
-  .slide-one img, .slide-tow img, .slide-three img, .slide-four img{
-    width: 96%
   }
   .info p{
     padding-right: 60%
@@ -718,5 +714,35 @@ footer{
 @media (max-width:520px){
   .center{
     top: 115px
+  }
+}
+@media (min-width:320px) and (max-width:480px) {
+  nav{
+    padding: 2% 2%
+  }
+  .nav-btn{
+    margin: 0 20px
+  }
+  .icon-slide{
+    bottom: 103px;
+    left: 6px
+  }
+  .custome-stories{
+    height: 800px
+  }
+  .subscribe{
+    width: 80%
+  }
+  .subscribe img{
+    width: 94%
+  }
+  .sub-heading{
+    padding-top: 40px;
+  }
+  .sub-heading input{
+    width: 55%
+  }
+  .sub-btn{
+    left: 62%
   }
 }
