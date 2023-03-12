@@ -105,22 +105,61 @@ body::-webkit-scrollbar-thumb {
   background: none;
 }
 /* the navbar section */
-nav {
+.navbar {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-  padding:2% 10%;
+  padding: 4% 9% 2%;
 }
-nav ul {
+
+.navbar-brand {
+  font-size: 1.5rem;
   display: flex;
-  list-style: none;
   align-items: center;
 }
 
-nav li {
-  padding-left: 2rem;
-  position: relative;
-  /* right: 98%; */
+.navbar-menu {
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  position: absolute;
+  left: -90px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.navbar-menu li {
+  margin-bottom: 1rem;
+}
+
+.navbar-menu a {
+  display: block;
+  padding:0 1.5rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar-toggle-label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.a-nav{
+  text-decoration: none;
+  color: #fff;
+  padding: 0 10px
+}
+.lni-consulting::before {
+  font-size: 35px;
+  color: #0081C9
+}
+#navbar-toggle{
+  display:none
 }
 .nav-btn{
   margin: 0 30px;
@@ -131,15 +170,13 @@ nav li {
   border-radius: 5px;
   cursor: pointer;
 }
-
-nav a {
-  text-decoration: none;
+.a-nav{
   color: #fff;
-  filter:blur(0);
-}
-.h2-nav{
-  color: #fff;
+  font-weight: 700;
   font-size: 30px
+}
+.h1-nav{
+  padding-top: 120px;
 }
 /* header section */
 .header{
@@ -182,7 +219,7 @@ nav a {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 95px
+  top: 115px
 }
 .house-informations{
   height: 100px;
@@ -344,8 +381,8 @@ hr{
   align-items: center;
 }
 .story{
-  height: 15%;
-  width: 400px;
+  height: 250px;
+  width: 85%;
   background-color: #472D2D;
   border: 0;
   border-radius: 10px;
@@ -497,9 +534,7 @@ footer{
 .col p {
   text-align: left;
   color: grey;
-  position: relative;
-  left: 33%;
-  padding:0  50px 0 0;
+  display: contents;
 }
 .col ul{
   display: inline-block;
@@ -598,7 +633,8 @@ footer{
   }
   .content-img{
     float: none;
-    width: 100%
+    width: 100%;
+    margin-right: 0;
   }
   .heading-content h1{
     text-align: center;
@@ -633,8 +669,39 @@ footer{
   .model-btn{
     left: 72.5%
   }
+  .center{
+    top: 125px
+  }
 }
 @media (max-width:800px) {
+    .navbar {
+      position: relative;
+    }
+    .navbar-menu {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar-toggle-label {
+      display: block;
+      font-size: 30px;
+      color: #fff
+    }
+    .nav-btn{
+      margin: 0 0 25px
+    }
+    #navbar-toggle:checked ~ .navbar-menu {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 20px
+    }
   .subscribe{
     width: 65%;
     height: 43rem;
@@ -674,9 +741,6 @@ footer{
   .info h1{
     padding-right: 50%
   }
-  nav ul{
-    padding-left: 0;
-  }
   .house-informations{
       width: 75%
   }
@@ -713,19 +777,27 @@ footer{
 }
 @media (max-width:520px){
   .center{
-    top: 115px
+    top: 160px
   }
 }
 @media (min-width:320px) and (max-width:480px) {
-  nav{
-    padding: 2% 2%
+  .res-slider{
+    width: 112%;
+    height: 22rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
   }
-  .nav-btn{
-    margin: 0 20px
+  .content{
+    margin: 200px 10% 13rem
+  }
+  .profil{
+    bottom: 30px;
+    left: 0
   }
   .icon-slide{
-    bottom: 103px;
-    left: 6px
+    bottom: 9px;
+    left: 20px
   }
   .custome-stories{
     height: 800px
@@ -744,5 +816,17 @@ footer{
   }
   .sub-btn{
     left: 62%
+  }
+  .people-say{
+    display: block;
+  }
+  .custome-stories h1{
+    padding: 50px
+  }
+  .links{
+    grid-template-columns: auto;
+  }
+  .center{
+    display: none;
   }
 }

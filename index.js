@@ -4,6 +4,8 @@ const navBtn = document.querySelector('.nav-btn');
 const closeBtn = document.querySelector('.closeModalBtn')
 const contactModal = document.querySelector('.contact-model');
 const overlay = document.querySelector('.overlay');
+const navMobile = document.querySelector('.navbar-toggle-label');
+const info = document.querySelector('.info');
 
 // open and close model
 navBtn.addEventListener('click', function() {
@@ -18,6 +20,9 @@ const closeModalFn = function () {
 // the btn to close modal
 closeBtn.addEventListener('click', closeModalFn);
 
+navMobile.addEventListener('click', () => {
+  info.classList.toggle('h1-nav');
+})
 // scrlle btn to the top
 scroll.addEventListener('click', function (e) {
   const s1coords = header.getBoundingClientRect();
